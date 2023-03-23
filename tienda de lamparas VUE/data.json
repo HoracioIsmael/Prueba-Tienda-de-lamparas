@@ -1,0 +1,100 @@
+{
+  "Lamparas": [
+    {
+      "id": 1,
+      "nombre": "Lámpara de techo industrial",
+      "precio": 99,
+      "imagen": "img/lampara1.jpg",
+      "descripcion": "Lámpara de techo estilo industrial con estructura de metal en color negro mate y dos luces en forma de campana. Perfecta para iluminar espacios amplios y modernos.",
+      "tipo": "techo"
+    },
+    {
+      "id": 2,
+      "nombre": "Lámpara de pared industrial",
+      "precio": 59,
+      "imagen": "img/lampara2.jpg",
+      "descripcion": "Lámpara de pared estilo industrial con estructura de metal en color negro mate y pantalla ajustable en forma de cono. Ideal para iluminar zonas específicas y crear un ambiente acogedor.",
+      "tipo": "pared"
+    },
+    {
+      "id": 3,
+      "nombre": "Lámpara de mesa industrial",
+      "precio": 39,
+      "imagen": "img/lampara3.jpg",
+      "descripcion": "Lámpara de mesa estilo industrial con base de metal en color negro mate y pantalla ajustable en forma de cono. Perfecta para iluminar espacios de trabajo o estudios.",
+      "tipo": "mesa"
+    },
+    {
+      "id": 4,
+      "nombre": "Lámpara de pie industrial",
+      "precio": 89,
+      "imagen": "img/lampara4.jpg",
+      "descripcion": "Lámpara de pie estilo industrial con estructura de metal en color negro mate y pantalla ajustable en forma de cono. Ideal para iluminar zonas específicas y crear un ambiente acogedor.",
+      "tipo": "pie"
+    },
+    {
+      "id": 5,
+      "nombre": "Lámpara colgante industrial",
+      "precio": 49,
+      "imagen": "img/lampara5.jpg",
+      "descripcion": "Lámpara colgante estilo industrial con pantalla de metal en color negro mate y cable trenzado en color negro. Ideal para iluminar ambientes modernos y minimalistas.",
+      "tipo": "colgantes"
+    },
+    {
+      "id": 6,
+      "nombre": "Lámpara de techo industrial grande",
+      "precio": 149,
+      "imagen": "img/lampara6.jpg",
+      "descripcion": "Lámpara de techo estilo industrial con estructura de metal en color negro mate y seis luces en forma de campana. Perfecta para iluminar espacios amplios y modernos.",
+      "tipo": "techo"
+    },
+    {
+      "id": 7,
+      "nombre": "Lámpara de pared industrial pequeña",
+      "precio": 39,
+      "imagen": "img/lampara7.jpg",
+      "descripcion": "Lámpara de pared estilo industrial con estructura de metal en color negro mate y pantalla ajustable en forma de cono. Ideal para iluminar zonas específicas y crear un ambiente acogedor.",
+      "tipo": "pared"
+    },
+    {
+      "id": 8,
+      "nombre": "Lámpara de mesa industrial pequeña",
+      "precio": 29,
+      "imagen": "img/lampara8.jpg",
+      "descripcion": "Lámpara de mesa estilo industrial con base de metal en color negro mate y pantalla ajustable en forma de cono. Perfecta para iluminar espacios de trabajo o estudios.",
+      "tipo": "mesa"
+    },
+    {
+      "id": 9,
+      "nombre": "Lámpara de pie industrial grande",
+      "precio": 119,
+      "imagen": "img/lampara9.jpg",
+      "descripcion": "Lámpara de pie estilo industrial con estructura de metal en color negro mate y pantalla ajustable en forma de cono. Ideal para iluminar zonas específicas y crear un ambiente acogedor.",
+      "tipo": "pie"
+    },
+    {
+      "id": 10,
+      "nombre": "Lámpara colgante industrial grande",
+      "precio": 79,
+      "imagen": "img/lampara10.jpg",
+      "descripcion": "Lámpara colgante estilo industrial con pantalla de metal en color negro mate y cable trenzado en color negro. Ideal para iluminar ambientes modernos y minimalistas.",
+      "tipo": "colgantes"
+    },
+    {
+      "id": 11,
+      "nombre": "Lámpara de techo industrial doble",
+      "precio": 119,
+      "imagen": "img/lampara11.jpg",
+      "descripcion": "Lámpara de techo estilo industrial con estructura de metal en color negro mate y dos luces en forma de campana. Perfecta para iluminar espacios amplios y modernos.",
+      "tipo": "techo"
+    },
+    {
+      "id": 12,
+      "nombre": "Lámpara de pared industrial doble",
+      "precio": 79,
+      "imagen": "img/lampara12.jpg",
+      "descripcion": "Lámpara de pared estilo industrial con estructura de metal en color negro mate y dos pantallas ajustables en forma de cono. Ideal para iluminar zonas específicas y crear un ambiente acogedor.",
+      "tipo": "pared"
+    }
+  ]
+}

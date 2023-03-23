@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de lámparas industriales</title>
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="./img/logo.png" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo2.jpg" alt="Logo de la tienda">
+        </div>
+        <div>
+            <h1>
+                LÁMPARAS DE DISEÑO INDUSTRIAL
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Lámparas</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="app">
+            <section class="productos container d-flex align-items-center space-around">
+                <div>
+                    <h2 class="titulo-secundario">Lámparas industriales</h2>
+                </div>
+
+                <form>
+                    {{buscador}}
+                    <div class="serch">
+                        <input type="text" placeholder="Buscar" v-model="searchValue">
+                    </div>
+                    <div class="d-flex flex-wrap align-items-center gap-4 ms-3">
+                        <div v-for="tipo in checkboxes">
+                            <label :for="tipo">{{tipo}}</label>
+                            <input type="checkbox" :id="tipo" :value='tipo' v-model="checkboxSelected">
+                        </div>
+                    </div>
+                </form>
+
+            </section>
+            <div id="contenedorLamparas" class="container d-flex flex-wrap col-md-6">
+                <div v-for="lampara in lamparas" v-if="!lamparasFiltradas" class="card mx-5 my-2 ml-4 mr-4 d-flex flex-wrap"
+                    style="width:18rem;" bg-light text-dark>
+                    <img :src="lampara.imagen" :alt="lampara.imagen" class="card-img-top"
+                        style="width:18rem; height: 22vh;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{lampara.nombre}}</h5>
+                        <p class="card-text">Tipo: {{lampara.tipo}}</p>
+                        <p class="card-text">Descripcion: {{lampara.descripcion}}</p>
+                        <p class="card-text">
+                            <a :href="'./detalle.html?id=' + lampara._id" class="btn btn-primary">🔎 Detalle</a>
+                        </p>
+                    </div>
+                </div>
+                <div v-for="lampara in lamparasFiltradas" v-else="lamparasFiltradas"
+                    class="card mx-2 my-2 align-items-center justify-content-center d-flex flex-wrap"
+                    style="width:18rem;" bg-light text-dark>
+                    <img :src="lampara.imagen" :alt="lampara.imagen" class="card-img-top"
+                        style="width:18rem; height: 22vh;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{lampara.nombre}}</h5>
+                        <p class="card-text">Tipo: {{lampara.tipo}}</p>
+                        <p class="card-text">Descripcion: {{lampara.descripcion}}</p>
+                        <p class="card-text">
+                            <a :href="'./detalle.html?id=' + lampara._id" class="btn btn-primary">🔎 Detalle</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!--<div class="swiper-contenedor">
+        <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="./img/lamp1.png" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp2.png" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp3.png" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp4.png" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp5.jpg" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp5.jpg" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp6.jpg" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp7.jpg" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp8.jpg" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp1.png" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp1.png" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>-->
+
+    <!--FOOTER-->
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="index.html">
+                        <img src="./img/logo2.jpg" alt="logo footer" />
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Tienda de lámparas industriales</p>
+                <p>Dirección: Calle Falsa 123</p>
+                <p>Teléfono: 123456789</p>
+            </div>
+            <div class="box">
+                <h2>SEGUINOS!!</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 - <b> Horacio Correa </b> - JAVA</small>
+        </div>
+    </footer>
+
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8e3741e47f.js" crossorigin="anonymous"></script>
+    <!--<script src="https://unpkg.com/vue@3"></script>-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
