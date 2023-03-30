@@ -34,7 +34,7 @@
     </header>
     <main>
         <div id="app">
-            <section class="productos container d-flex align-items-center space-around">
+            <section class="productos container d-flex align-items-center">
                 <div>
                     <h2 class="titulo-secundario">Lámparas industriales</h2>
                 </div>
@@ -53,12 +53,12 @@
                 </form>
 
             </section>
-            <div id="contenedorLamparas" class="container d-flex flex-wrap col-md-6">
-                <div v-for="lampara in lamparas" v-if="!lamparasFiltradas" class="card mx-5 my-2 ml-4 mr-4 d-flex flex-wrap"
-                    style="width:18rem;" bg-light text-dark>
+            <div id="contenedorLampara" class="container d-flex flex-wrap col-md-12">
+                <div v-for="lampara in lamparas" v-if="!lamparasFiltradas" class="card mx-6 my-2 ml-4 mr-4 d-flex flex-wrap bg-dark text-light "
+                    style="width:18rem;">
                     <img :src="lampara.imagen" :alt="lampara.imagen" class="card-img-top"
                         style="width:18rem; height: 22vh;">
-                    <div class="card-body">
+                    <div class="card-body ">
                         <h5 class="card-title">{{lampara.nombre}}</h5>
                         <p class="card-text">Tipo: {{lampara.tipo}}</p>
                         <p class="card-text">Descripcion: {{lampara.descripcion}}</p>
@@ -77,7 +77,7 @@
                         <p class="card-text">Tipo: {{lampara.tipo}}</p>
                         <p class="card-text">Descripcion: {{lampara.descripcion}}</p>
                         <p class="card-text">
-                            <a :href="'./detalle.html?id=' + lampara._id" class="btn btn-primary">🔎 Detalle</a>
+                            <a :href="'./detalle.html?id=' + lampara.id" class="btn btn-primary">🔎 Detalle</a>
                         </p>
                     </div>
                 </div>
@@ -85,8 +85,8 @@
 
         </div>
     </main>
-    <!--<div class="swiper-contenedor">
-        <div class="swiper-wrapper align-items-center">
+    <div class="swiper-contenedor">
+        <div class="swiper-wrapper d-flex align-items-center justify-content-center">
             <div class="swiper-slide"><img src="./img/lamp1.png" class="img-fluid" alt="" style="width:10rem;">
             </div>
             <div class="swiper-slide"><img src="./img/lamp2.png" class="img-fluid" alt="" style="width:10rem;">
@@ -97,8 +97,7 @@
             </div>
             <div class="swiper-slide"><img src="./img/lamp5.jpg" class="img-fluid" alt="" style="width:10rem;">
             </div>
-            <div class="swiper-slide"><img src="./img/lamp5.jpg" class="img-fluid" alt="" style="width:10rem;">
-            </div>
+            
             <div class="swiper-slide"><img src="./img/lamp6.jpg" class="img-fluid" alt="" style="width:10rem;">
             </div>
             <div class="swiper-slide"><img src="./img/lamp7.jpg" class="img-fluid" alt="" style="width:10rem;">
@@ -107,11 +106,14 @@
             </div>
             <div class="swiper-slide"><img src="./img/lamp1.png" class="img-fluid" alt="" style="width:10rem;">
             </div>
-            <div class="swiper-slide"><img src="./img/lamp1.png" class="img-fluid" alt="" style="width:10rem;">
+            <div class="swiper-slide"><img src="./img/lamp5.jpg" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp2.png" class="img-fluid" alt="" style="width:10rem;">
+            </div>
+            <div class="swiper-slide"><img src="./img/lamp3.png" class="img-fluid" alt="" style="width:10rem;">
             </div>
         </div>
-        <div class="swiper-pagination"></div>
-    </div>-->
+    </div>
 
     <!--FOOTER-->
 
@@ -120,7 +122,7 @@
             <div class="box">
                 <figure>
                     <a href="index.html">
-                        <img src="./img/logo2.jpg" alt="logo footer" />
+                        <img src="./img/logo2.jpg" alt="logo footer" class="logoFooter"/>
                     </a>
                 </figure>
             </div>
@@ -151,7 +153,6 @@
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/8e3741e47f.js" crossorigin="anonymous"></script>
-    <!--<script src="https://unpkg.com/vue@3"></script>-->
     <script src="https://unpkg.com/vue@3"></script>
     <script src="./main.js"></script>
 </body>
