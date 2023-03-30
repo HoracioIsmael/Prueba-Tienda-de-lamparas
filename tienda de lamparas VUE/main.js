@@ -6,7 +6,7 @@ const app = Vue.createApp({
       checkboxes: [],
       checkboxSelected: [],
       searchValue: "",
-      contenedorLampara: [],
+      contenedorCard: [],
     }
   },
   created() {
@@ -18,17 +18,18 @@ const app = Vue.createApp({
         this.lamparas = data.Lamparas
         this.lamparasFiltradas = this.lamparas
         let arrayCard = data.Lamparas
+        console.log(arrayCard);
         this.getCheckboxes()
         if (document.title == "Tienda de lámparas industriales") {
           this.lamparasFiltradas = this.lamparas.filter(
             (lampara) => lampara.tipo !== this.lamparas.tipo
           );
           this.lamparas = this.lamparasFiltradas;
-          console.log(this.lamparas);
         }
         if (document.title == "Detalle de lampara") {
           let cardId = location.search.split('?id=').join('')
-          this.contenedorCard = arrayCard.filter((card) => card._id == cardId)
+          this.contenedorCard = arrayCard.filter((card) => card.id == cardId)
+          console.log(contenedorCard);
         }
       })
       .catch((error) => console.log(error))
@@ -67,4 +68,3 @@ const app = Vue.createApp({
 
   },
 }).mount('#app')
-
